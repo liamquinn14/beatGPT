@@ -192,6 +192,7 @@ h1 {
 
 .hero-buttons:hover {
   color: goldenrod;
+  cursor: pointer;
 }
 
 #hero-title {
