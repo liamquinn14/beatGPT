@@ -4,7 +4,7 @@ let pointsDisplay = document.getElementById('display-points');
 pointsDisplay.innerText = "Points: " + points + "/99";
 let rounds = 0;
 let roundsDisplay = document.getElementById('display-rounds');
-roundsDisplay.innerText = "Round: " + rounds + "/7";
+roundsDisplay.innerText = "Rounds remaining: " + (7 - rounds)
 let answered = true
 
 let checkScore = (rounds, points) => {
@@ -31,7 +31,11 @@ function nextQuestion() {
   } else {
   answered = false
   rounds++;
-  roundsDisplay.innerText = "Round: " + rounds + "/7";
+  if (rounds === 6) {
+    roundsDisplay.innerText = "FINAL ROUND"
+  } else {
+  roundsDisplay.innerText = "Rounds remaining: " + (7 - rounds)
+  }
   if (points >= 99) {
     alert("Congratulations! You win!");
   } else if (rounds >= 7 && points < 99) {
@@ -173,7 +177,6 @@ function submitAnswers() {
   if (answered === true) {
     alert('Your answers have been submitted. Proceed to the next question.')
   } else {
-  answered = true
   const runnersUp = document.getElementById('runners-up-container');
   const champion = document.getElementById('champion-container');
   if (runnersUp.childElementCount < 3) {
@@ -182,6 +185,7 @@ function submitAnswers() {
     alert("you must submit 1 champion answer");
   } else {
     calculatePoints();
+    answered = true
   }
   }
 }
@@ -226,7 +230,7 @@ runnersUp.childNodes.forEach((child) => runnersUpArray.push(Number(child.id)))
 let totalScoreArray = 0
 for (let i = 0; i < runnersUpArray.length; i++) {
   totalScoreArray += runnersUpArray[i]
-} console.log(totalScoreArray)
+} 
 if (totalScoreArray === 9 && Number(champion.children[0].id) === 1) {
   points += 33
   pointsDisplay.innerText = "Points: " + points + "/99"
