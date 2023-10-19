@@ -4,7 +4,7 @@ let pointsDisplay = document.getElementById('display-points');
 pointsDisplay.innerText = "Points: " + points + "/99";
 let rounds = 0;
 let roundsDisplay = document.getElementById('display-rounds');
-roundsDisplay.innerText = "Rounds remaining: " + (7 - rounds)
+roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
 let answered = true
 
 let checkScore = (rounds, points) => {
@@ -34,7 +34,7 @@ function nextQuestion() {
   if (rounds === 6) {
     roundsDisplay.innerText = "FINAL ROUND"
   } else {
-  roundsDisplay.innerText = "Rounds remaining: " + (7 - rounds)
+  roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
   }
   if (points >= 99) {
     alert("Congratulations! You win!");
@@ -260,7 +260,7 @@ if (points >= 99) {
 
 const questions = [
   {
-    question: "What do humans think is the best thing about Twitter?",
+    question: "What is the best thing about Twitter?",
     answers: [
       {
         text: "Real-Time Information",
@@ -313,7 +313,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the best thing about the internet?",
+    question: "What is the best thing about the internet?",
     answers: [
       {
         text: "Access to Information",
@@ -366,7 +366,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about music?",
+    question: "What is the worst thing about music?",
     answers: [
       {
         text: "Overcommercialization",
@@ -419,7 +419,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about immigration?",
+    question: "What is the worst thing about immigration?",
     answers: [
       {
         text: "Strain on Resources",
@@ -472,7 +472,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about text messaging?",
+    question: "What is the worst thing about text messaging?",
     answers: [
       {
         text: "Miscommunication",
@@ -517,7 +517,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about war?",
+    question: "What is the worst thing about war?",
     answers: [
       {
         text: "Loss of Innocent Lives",
@@ -562,7 +562,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about taxes?",
+    question: "What is the worst thing about taxes?",
     answers: [
       {
         text: "Complexity",
@@ -607,7 +607,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the worst thing about politics?",
+    question: "What is the worst thing about politics?",
     answers: [
       {
         text: "Corruption",
@@ -652,7 +652,7 @@ const questions = [
     ]
   },
   {
-    question: "What do humans think is the funniest type of joke?",
+    question: "What is the funniest type of joke?",
     answers: [
       {
         text: "Puns and Wordplay",
@@ -832,7 +832,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that humans love about themselves?",
+    question: "What do humans love about themselves the most?",
     answers: [
       {
         text: "Sense of Humor",
@@ -877,7 +877,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that scares humans most?",
+    question: "What thing scares humans the most?",
     answers: [
       {
         text: "Death",
@@ -922,7 +922,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that motivates humans most?",
+    question: "What motivates humans the most?",
     answers: [
       {
         text: "Personal Goals",
@@ -967,7 +967,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that makes humans unhappiest?",
+    question: "What makes humans the least happiest?",
     answers: [
       {
         text: "Loneliness",
@@ -1012,7 +1012,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that makes humans ?",
+    question: "What makes humans the happiest?",
     answers: [
       {
         text: "Connection with Others",
@@ -1102,7 +1102,7 @@ const questions = [
     ]
   },
   {
-    question: "What are humanity's favorite things about drawing?",
+    question: "What is the best thing about drawing?",
     answers: [
       {
         text: "Creative Expression",
@@ -1147,7 +1147,7 @@ const questions = [
     ]
   },
   {
-    question: "What are humanity's favorite things about being able to take photographs?",
+    question: "What's the best thing about taking photographs?",
     answers: [
       {
         text: "Capturing Memories",
@@ -1192,7 +1192,7 @@ const questions = [
     ]
   },
   {
-    question: "What are humanity's favorite things about journaling?",
+    question: "What's the best thing about journaling?",
     answers: [
       {
         text: "Self-Reflection",
@@ -1237,7 +1237,7 @@ const questions = [
     ]
   },
   {
-    question: "What are humanity's favorite things about humour?",
+    question: "What's the best thing about humour?",
     answers: [
       {
         text: "Stress Relief",
@@ -1282,7 +1282,7 @@ const questions = [
     ]
   },
   {
-    question: "What are humanity's favorite things about faith in God?",
+    question: "What is the best thing about faith in God?",
     answers: [
       {
         text: "Sense of Purpose",
@@ -1370,8 +1370,7 @@ const questions = [
         top_answer: true
       }
     ]
-  },
-  // Add more questions as needed
+  }
 ];
 
 nextQuestion()
