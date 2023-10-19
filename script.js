@@ -1370,7 +1370,637 @@ const questions = [
         top_answer: true
       }
     ]
-  }
+  },
+  {
+    question: "What do people worry about every day?",
+    answers: [
+      {
+        text: "Health",
+        rank: 5,
+        top_answer: false
+      },
+      {
+        text: "Finances",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Work Stress",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Relationships",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Future Uncertainty",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Environmental Issues",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Personal Safety",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Achieving Goals",
+        rank: 1,
+        top_answer: true
+      }
+    ]
+  },
+  {
+    question: "Why do people lie?",
+    answers: [
+      {
+        text: "Avoiding Consequences",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Protecting Others",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Preserving Self-image",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Maintaining Relationships",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Gaining Advantage",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Fear of Judgment",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Seeking Approval",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Avoiding Hurtful Truths",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why do children misbehave?",
+    answers: [
+      {
+        text: "Testing Boundaries",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Expressing Independence",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Seeking Attention",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Exploring Curiosity",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Responding to Stress",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Lack of Social Skills",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Emotional Expression",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Imitating Behavior",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why do people overeat?",
+    answers: [
+      {
+        text: "Emotional Eating",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Boredom",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Social Influence",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Biological Hunger",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Environmental Cues",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Lack of Nutrient-Rich Options",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Mindless Eating",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Reward System",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why do humans swear?",
+    answers: [
+      {
+        text: "Expressing Frustration",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Relieving Pain",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Enhancing Communication",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Coping with Stress",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Establishing Identity",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Social Bonding",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Expressing Intensity",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Cultural Influence",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why don't people exercise enough?",
+    answers: [
+      {
+        text: "Lack of Motivation",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Busy Schedules",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Limited Accessibility",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Physical Health Barriers",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Mental Health Challenges",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Perceived Difficulty",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Lack of Social Support",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Lifestyle Choices",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why do people love alcohol?",
+    answers: [
+      {
+        text: "Social Enjoyment",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Taste and Flavor",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Relaxation",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Escaping Reality",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Cultural Tradition",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Enhanced Socializing",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Reduced Inhibition",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Variety of Options",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why do people enjoy going on holiday?",
+    answers: [
+      {
+        text: "Escape from Routine",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Relaxation",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Exploration and Adventure",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Quality Time with Loved Ones",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Cultural Immersion",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Creating Memories",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Stress Relief",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "New Experiences",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+    question: "Why are people homophobic?",
+    answers: [
+      {
+        text: "Cultural Upbringing",
+        rank: 4,
+        top_answer: false
+      },
+      {
+        text: "Lack of Education",
+        rank: 2,
+        top_answer: false
+      },
+      {
+        text: "Fear of the Unknown",
+        rank: 7,
+        top_answer: false
+      },
+      {
+        text: "Social Stigma",
+        rank: 1,
+        top_answer: true
+      },
+      {
+        text: "Religious Beliefs",
+        rank: 8,
+        top_answer: false
+      },
+      {
+        text: "Insecurity",
+        rank: 3,
+        top_answer: false
+      },
+      {
+        text: "Misinformed Stereotypes",
+        rank: 6,
+        top_answer: false
+      },
+      {
+        text: "Peer Pressure",
+        rank: 5,
+        top_answer: false
+      }
+    ]
+  },
+  {
+  question: "Why are people racist?",
+  answers: [
+    {
+      text: "Cultural Upbringing",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Ignorance",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Fear of the Unknown",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Historical Legacy",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Power Dynamics",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Insecurity",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Misinformed Stereotypes",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Social Conditioning",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+},
+{
+  question: "Why isn't vegetarianism catching on?",
+  answers: [
+    {
+      text: "Cultural Traditions",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Lack of Awareness",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Perceived Inconvenience",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Social Norms",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Taste Preferences",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Meat Industry Influence",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Nutritional Concerns",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Limited Accessibility",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+},
+{
+  question: "Why do so many girls love a 'bad boy'?",
+  answers: [
+    {
+      text: "Perceived Confidence",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Excitement and Thrill",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Rebellion Against Norms",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Media Influence",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Mystery and Intrigue",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Desire for Change",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Perceived Independence",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Influence of Peer Perception",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+},
+{
+  question: "Why do 'nice guys finish last'?",
+  answers: [
+    {
+      text: "Perceived Lack of Assertiveness",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Misinterpretation of Kindness",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Preference for Confidence",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Attraction to Challenge",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Lack of Self-Confidence",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Mismatched Expectations",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Influence of Media Portrayals",
+      rank: 5,
+      top_answer: false
+    },
+    {
+      text: "Perceived Vulnerability",
+      rank: 1,
+      top_answer: true
+    }
+  ]
+},
+{
+  question: "Why are divorce rates so high?",
+  answers: [
+    {
+      text: "Changing Societal Norms",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Lack of Communication",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Financial Strain",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Individualism",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Infidelity",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Marrying Too Young",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Unrealistic Expectations",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Stress and Workload",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+}
 ];
 
 nextQuestion()
