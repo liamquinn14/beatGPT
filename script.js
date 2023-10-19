@@ -171,7 +171,7 @@ runnersUp.childNodes.forEach((child) => {
     if (child.id == 1) {
       child.style.backgroundColor = "goldenrod"
       child.innerText += " " + "+5 points"
-    } else if (child.id < 5) {s
+    } else if (child.id < 5) {
       child.style.backgroundColor = "silver"
       child.innerText += " " + "+5 points"
     } else {
