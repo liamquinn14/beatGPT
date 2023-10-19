@@ -14,15 +14,15 @@
   <main>
     <div class="quiz-container">
       <div class="container" id="question-display">
-        <div class="label">Question</div>
+        <div class="label">We asked ChatGPT...</div>
         <p id="question-text">Press "Next Question" to start</p>
       </div>
-      <div class="label">Champion Answer</div>
+      <div class="label">What do you think was ChatGPT's top answer? </div>
       <div class="container" id="champion-container" ondrop="dropChampion(event)" ondragover="allowDrop(event)">
         <!-- Add an image or content for the champion answer -->
         <!-- <img src="champion-answer-image.jpg" alt="Champion Answer Image"> -->
       </div>
-      <div class="label">Runners Up</div>
+      <div class="label">What were ChatGPT's three runner-up answers? </div>
       <div class="container" id="runners-up-container" ondrop="dropRunnersUp(event)" ondragover="allowDrop(event)">
         <!-- Runners up container content -->
       </div>
@@ -30,8 +30,12 @@
       <div class="container grid-container" id="choices-container" ondrop="dropChoices(event)" ondragover="allowDrop(event)">
         <!-- Answer choices will be dynamically added here -->
       </div>
-
+    <div id="bottom-container"> 
+      <div id="display-rounds"> </div>
       <button id="next-question-btn" onclick="nextQuestion()">Next Question</button>
+      <button id="submit-btn" onclick="submitAnswers()">Submit Answers</button>
+      <div id="display-points"> </div>
+    </div>
     </div>
   </main>
 
