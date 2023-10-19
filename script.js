@@ -220,7 +220,7 @@ function calculatePoints() {
       child.innerText += " " + "+12 points";
     } else if (child.id < 5) {
       child.style.backgroundColor = "silver";
-      child.innerText += " " + "+3 points";
+      child.innerText += " " + "+5 points";
     } else {
       child.style.backgroundColor = "rgb(29, 29, 29)";
     }
@@ -243,7 +243,7 @@ if (Number(champion.children[0].id) === 1) {
   pointsDisplay.innerText = "Points: " + points + "/99"
   checkScore()
 } else if (Number(champion.children[0].id) < 5) {
-  points += 3
+  points += 5
   pointsDisplay.innerText = "Points: " + points + "/99"
   checkScore()
 } else {
@@ -1996,6 +1996,96 @@ const questions = [
     },
     {
       text: "Stress and Workload",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+},
+{
+  question: "Why do people want to abolish the monarchy?",
+  answers: [
+    {
+      text: "Desire for Equality",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Cost of Royal Maintenance",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Symbol of Outdated Governance",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Anti-Aristocratic Sentiment",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Shift Toward Republic Values",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Political Power Concerns",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Public Funds Allocation",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "National Identity Evolution",
+      rank: 5,
+      top_answer: false
+    }
+  ]
+},
+{
+  question: "Why do people stigmatise sex?",
+  answers: [
+    {
+      text: "Historical Moral Codes",
+      rank: 4,
+      top_answer: false
+    },
+    {
+      text: "Religious Taboos",
+      rank: 2,
+      top_answer: false
+    },
+    {
+      text: "Patriarchal Influences",
+      rank: 7,
+      top_answer: false
+    },
+    {
+      text: "Fear of Social Disapproval",
+      rank: 1,
+      top_answer: true
+    },
+    {
+      text: "Cultural Conservatism",
+      rank: 8,
+      top_answer: false
+    },
+    {
+      text: "Lack of Comprehensive Sex Education",
+      rank: 3,
+      top_answer: false
+    },
+    {
+      text: "Perceived Moral Decay",
+      rank: 6,
+      top_answer: false
+    },
+    {
+      text: "Media Portrayals",
       rank: 5,
       top_answer: false
     }
