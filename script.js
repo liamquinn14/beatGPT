@@ -1,28 +1,38 @@
 // Array of questions
-let points = 0
-let pointsDisplay = document.getElementById('display-points')
-pointsDisplay.innerText = "Points: " + points + "/99"
-let rounds = 0
-let roundsDisplay = document.getElementById('display-rounds')
-roundsDisplay.innerText = "Rounds: " + rounds + "/7"
+let points = 0;
+let pointsDisplay = document.getElementById('display-points');
+pointsDisplay.innerText = "Points: " + points + "/99";
+let rounds = 0;
+let roundsDisplay = document.getElementById('display-rounds');
+roundsDisplay.innerText = "Rounds: " + rounds + "/7";
 
 let checkScore = (rounds, points) => {
-if (points === 99) {
-  alert('Congratulations! You have beaten ChatGPT. This time it took you ' + rounds + ' rounds. The world record is 3 rounds.')
-} else if (rounds >= 7 && points <= 99) {
-  alert('GAME OVER! Unlucky! You only scored ' + points + ' points. Refresh the browser to play again.')
-} else return
-}
+  if (points === 99) {
+    alert('Congratulations! You have beaten ChatGPT. This time it took you ' + rounds + ' rounds. The world record is 3 rounds.');
+  } else if (rounds >= 7 && points <= 99) {
+    alert('GAME OVER! Unlucky! You only scored ' + points + ' points. Refresh the browser to play again.');
+  } else return;
+};
 
-let selectedQuestion
+let selectedQuestion;
 
 // Function to display the next question
 function nextQuestion() {
-  rounds++
-roundsDisplay.innerText = "Rounds " + rounds + "/7"
+  rounds++;
+  roundsDisplay.innerText = "Rounds " + rounds + "/7";
+
+  if (questions.length === 0) {
+    // No more questions left
+    alert("Congratulations! You've completed all the questions.");
+    return;
+  }
+
   // Get a random question from the array
   const randomIndex = Math.floor(Math.random() * questions.length);
   selectedQuestion = questions[randomIndex];
+
+  // Remove the selected question from the array
+  questions.splice(randomIndex, 1);
 
   // Update the question display
   const questionDisplay = document.getElementById("question-text");
@@ -36,7 +46,7 @@ roundsDisplay.innerText = "Rounds " + rounds + "/7"
     const choiceElement = document.createElement("div");
     choiceElement.className = "choice";
     choiceElement.draggable = true; // Make the choice draggable
-    choiceElement.id = answer.rank
+    choiceElement.id = answer.rank;
     choiceElement.setAttribute("ondragstart", "drag(event)");
     choiceElement.textContent = answer.text;
 
@@ -98,7 +108,6 @@ function dropChoices(event) {
 function allowDrop(event) {
   event.preventDefault();
 }
-// ... (your existing code)
 
 // Function to adjust container dimensions based on content
 function adjustContainerDimensions(containerId, isCircle = false) {
@@ -116,9 +125,6 @@ function adjustContainerDimensions(containerId, isCircle = false) {
     container.style.height = isCircle ? containerWidth + 'px' : containerHeight + 'px';
   }
 }
-
-// ... (rest of your existing code)
-
 
 // Initialize the answer choices
 const answerChoices = ["Choice 1", "Choice 2", "Choice 3", "Choice 4", "Choice 5", "Choice 6", "Choice 7", "Choice 8"];
@@ -145,47 +151,53 @@ function drag(event) {
 }
 
 function submitAnswers() {
-const runnersUp = document.getElementById('runners-up-container')
-const champion = document.getElementById('champion-container')
-if (runnersUp.childElementCount < 3) {
-alert("you must submit 3 runners up")
-} else if (champion.childElementCount < 1) {
-  alert("you must submit 1 champion answer")
-} else {
-  calculatePoints()
-}
+  const runnersUp = document.getElementById('runners-up-container');
+  const champion = document.getElementById('champion-container');
+  if (runnersUp.childElementCount < 3) {
+    alert("you must submit 3 runners up");
+  } else if (champion.childElementCount < 1) {
+    alert("you must submit 1 champion answer");
+  } else {
+    calculatePoints();
+  }
 }
 
 function calculatePoints() {
-const runnersUp = document.getElementById('runners-up-container')
-const champion = document.getElementById('champion-container')
-const choices = document.getElementById('choices-container')
-choices.childNodes.forEach((child) => {
-  if (child.id == 1) {
-    child.style.backgroundColor = "goldenrod"
-  } else if (child.id < 5) {
-    child.style.backgroundColor = "silver"
-  } else {
-  child.style.backgroundColor = "rgb(29, 29, 29)"}})
-runnersUp.childNodes.forEach((child) => {
+  const runnersUp = document.getElementById('runners-up-container');
+  const champion = document.getElementById('champion-container');
+  const choices = document.getElementById('choices-container');
+  choices.childNodes.forEach((child) => {
     if (child.id == 1) {
-      child.style.backgroundColor = "goldenrod"
-      child.innerText += " " + "+5 points"
+      child.style.backgroundColor = "goldenrod";
     } else if (child.id < 5) {
-      child.style.backgroundColor = "silver"
-      child.innerText += " " + "+5 points"
+      child.style.backgroundColor = "silver";
     } else {
-    child.style.backgroundColor = "rgb(29, 29, 29)"}})
-champion.childNodes.forEach((child) => {
+      child.style.backgroundColor = "rgb(29, 29, 29)";
+    }
+  });
+  runnersUp.childNodes.forEach((child) => {
     if (child.id == 1) {
-      child.style.backgroundColor = "goldenrod"
-      child.innerText += " " + "+12 points"
+      child.style.backgroundColor = "goldenrod";
+      child.innerText += " " + "+5 points";
     } else if (child.id < 5) {
-      child.style.backgroundColor = "silver"
-      child.innerText += " " + "+3 points"
+      child.style.backgroundColor = "silver";
+      child.innerText += " " + "+5 points";
     } else {
-      child.style.backgroundColor = "rgb(29, 29, 29)"}})
-let runnersUpArray = []
+      child.style.backgroundColor = "rgb(29, 29, 29)";
+    }
+  });
+  champion.childNodes.forEach((child) => {
+    if (child.id == 1) {
+      child.style.backgroundColor = "goldenrod";
+      child.innerText += " " + "+12 points";
+    } else if (child.id < 5) {
+      child.style.backgroundColor = "silver";
+      child.innerText += " " + "+3 points";
+    } else {
+      child.style.backgroundColor = "rgb(29, 29, 29)";
+    }
+  });
+  let runnersUpArray = [];
 runnersUp.childNodes.forEach((child) => runnersUpArray.push(Number(child.id)))
 let totalScoreArray = 0
 for (let i = 0; i < runnersUpArray.length; i++) {
