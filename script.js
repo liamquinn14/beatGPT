@@ -4,7 +4,8 @@ let pointsDisplay = document.getElementById('display-points');
 pointsDisplay.innerText = "Points: " + points + "/99";
 let rounds = 0;
 let roundsDisplay = document.getElementById('display-rounds');
-roundsDisplay.innerText = "Rounds: " + rounds + "/7";
+roundsDisplay.innerText = "Round: " + rounds + "/7";
+let answered = true
 
 let checkScore = (rounds, points) => {
   if (points === 99) {
@@ -18,8 +19,17 @@ let selectedQuestion;
 
 // Function to display the next question
 function nextQuestion() {
+  if (answered === false) {
+    alert('You cannot go to the next question without submitting your answers.')
+  } else {
+  answered = false
   rounds++;
-  roundsDisplay.innerText = "Rounds " + rounds + "/7";
+  roundsDisplay.innerText = "Round: " + rounds + "/7";
+  if (points >= 99) {
+    alert("Congratulations! You win!");
+  } else if (rounds >= 7 && points < 99) {
+    alert("Game over! You lose. Refresh the browser to play again.");
+  }
 
   if (questions.length === 0) {
     // No more questions left
@@ -55,7 +65,7 @@ function nextQuestion() {
 
   // Clear other containers
   clearContainers();
-}
+} }
 
 // Function to clear answer containers
 function clearContainers() {
@@ -151,6 +161,10 @@ function drag(event) {
 }
 
 function submitAnswers() {
+  if (answered === true) {
+    alert('Your answers have been submitted. Proceed to the next question.')
+  } else {
+  answered = true
   const runnersUp = document.getElementById('runners-up-container');
   const champion = document.getElementById('champion-container');
   if (runnersUp.childElementCount < 3) {
@@ -159,6 +173,7 @@ function submitAnswers() {
     alert("you must submit 1 champion answer");
   } else {
     calculatePoints();
+  }
   }
 }
 
@@ -221,6 +236,11 @@ if (Number(champion.children[0].id) === 1) {
 } else {
   pointsDisplay.innerText = "Points: " + points + "/99"
   checkScore()
+}
+if (points >= 99) {
+  alert("Congratulations! You win!");
+} else if (rounds >= 7 && points < 99) {
+  alert("Game over! You lose. Refresh the browser to play again.");
 }
 }
 }
@@ -979,7 +999,7 @@ const questions = [
     ]
   },
   {
-    question: "What is the thing that makes humans happiest?",
+    question: "What is the thing that makes humans ?",
     answers: [
       {
         text: "Connection with Others",
@@ -1338,30 +1358,7 @@ const questions = [
       }
     ]
   },
-  {
-    question: "What are humanity's favorite characteristics of their partners?",
-    answers: [
-      {
-        text: "Respect",
-        rank: 8,
-        top_answer: false
-      },
-      {
-        text: "Empathy",
-        rank: 6,
-        top_answer: false
-      },
-      {
-        text: "Communication Skills",
-        rank: 2,
-        top_answer: false
-      },
-      {
-        text: "Kindness",
-        rank: 7,
-        top_answer: false
-      }
-    ]
-  }
   // Add more questions as needed
 ];
+
+nextQuestion()
