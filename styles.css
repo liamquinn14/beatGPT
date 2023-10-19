@@ -83,6 +83,7 @@ h1 {
   margin-bottom: 5px;
   font-size: 18px;
   padding: 10px;
+  font-weight: bold;
 }
 
 #next-question-btn {
@@ -224,3 +225,33 @@ a:visited {
   background-color: #1d1d1d;
   margin-bottom: 1rem;
 }
+
+#back-to-home {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: min(20px, 10px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#home-background {
+  background-color: rgb(99, 1, 1);
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+#bottom-container {
+  margin-bottom: 28px;
+}
+
+
+#home-background:hover {
+  background-color: rgb(132, 2, 2);
+  border: 1px solid goldenrod;
+}
+
