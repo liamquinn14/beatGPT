@@ -15,6 +15,13 @@ let checkScore = (rounds, points) => {
   } else return;
 };
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 let selectedQuestion;
 
 // Function to display the next question
@@ -43,6 +50,8 @@ function nextQuestion() {
 
   // Remove the selected question from the array
   questions.splice(randomIndex, 1);
+
+  shuffleArray(selectedQuestion.answers);
 
   // Update the question display
   const questionDisplay = document.getElementById("question-text");
@@ -227,7 +236,7 @@ let filteredRunners = runnersUpArray.filter((rank) => rank < 5)
 points += filteredRunners.length * 5
 if (Number(champion.children[0].id) === 1) {
   points += 12
-  pointsDisplay.innerText = "Points: " + points
+  pointsDisplay.innerText = "Points: " + points + "/99"
   checkScore()
 } else if (Number(champion.children[0].id) < 5) {
   points += 3
