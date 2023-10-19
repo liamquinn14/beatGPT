@@ -9,7 +9,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
+<body class="how">
+    <div class="heading-container" id="how-to-head"> 
+    <h1 class="small-marg"> BEAT GPT </h1>
+    <h3 class="small-marg" id="tagline"> Do you know humanity better than AI? </h2>
+    </div>
+    <h2 class="small-marg"> <span id="how-to-play-title"> How To Play </span> </h2>
+    <div class="quiz-container" id="space">
+        <div class="container" id="question-display">
+          <p id="question-text"> The question is displayed here. How would you expect ChatGPT to answer?</p>
+        </div>
+        <div class="label">What do you think was ChatGPT's top answer? </div>
+        <div class="container" id="champion-container"> Out of the 8 available answer choices, what was the AI's top answer to the question? Drag and drop your answer here.
+        </div>
+        <div class="label">What were ChatGPT's three runner-up answers? </div>
+        <div class="container" id="runners-up-container"> Out of the remaining 7 answer choices, what were the AI's three runner-up answers? Drag and drop three runner-up answers here.
+          <!-- Runners up container content -->
+        </div>
+        <div class="label">Answer Choices</div>
+        <div class="container grid-container" id="choices-container">
+          <div class="choice"> Choice 1 </div>
+          <div class="choice"> Choice 2 </div>
+          <div class="choice"> Choice 3 </div>
+          <div class="choice"> Choice 4 </div>
+          <div class="choice"> Choice 5 </div>
+          <div class="choice"> Choice 6 </div>
+          <div class="choice"> Choice 7 </div>
+          <div class="choice"> Choice 8 </div>
+        </div>
+      <div id="bottom-container"> 
+        <div id="display-rounds"> 7 Rounds Remaining </div>
+        <button id="how-next-question-btn">Next Question</button>
+        <button id="how-submit-btn">Submit Answers</button>
+        <div id="display-points"> Points: 0/99</div>
+      </div>
+      </div>
+      <a href="index.html"> <div id="how-back-to-home"> <span id="home-background"> Back to home</div> </span> </a>
 </body>
 </html>

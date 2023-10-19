@@ -4,7 +4,7 @@ let pointsDisplay = document.getElementById('display-points');
 pointsDisplay.innerText = "Points: " + points + "/99";
 let rounds = 0;
 let roundsDisplay = document.getElementById('display-rounds');
-roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
+roundsDisplay.innerText = (7 - rounds) + " Rounds Remaining"
 let answered = true
 
 let checkScore = (rounds, points) => {
@@ -34,7 +34,7 @@ function nextQuestion() {
   if (rounds === 6) {
     roundsDisplay.innerText = "FINAL ROUND"
   } else {
-  roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
+  roundsDisplay.innerText = (7 - rounds) + " Rounds Remaining"
   }
   if (points >= 99) {
     alert("Congratulations! You win!");
