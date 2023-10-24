@@ -4,8 +4,10 @@ let pointsDisplay = document.getElementById('display-points');
 pointsDisplay.innerText = "Points: " + points + "/99";
 let rounds = 0;
 let roundsDisplay = document.getElementById('display-rounds');
-roundsDisplay.innerText = (7 - rounds) + " Rounds Remaining"
+roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
 let answered = true
+let submitBtn = document.getElementById('submit-btn')
+let nextBtn = document.getElementById('next-question-btn')
 
 let checkScore = (rounds, points) => {
   if (points === 99) {
@@ -30,11 +32,15 @@ function nextQuestion() {
     alert('You cannot go to the next question without submitting your answers.')
   } else {
   answered = false
+  let submitBtn = document.getElementById('submit-btn')
+  submitBtn.classList.remove('hide')
+  let nextBtn = document.getElementById('next-question-btn')
+  nextBtn.setAttribute('class', 'hide')
   rounds++;
   if (rounds === 6) {
     roundsDisplay.innerText = "FINAL ROUND"
   } else {
-  roundsDisplay.innerText = (7 - rounds) + " Rounds Remaining"
+  roundsDisplay.innerText = (7 - rounds) + " Rounds Left"
   }
   if (points >= 99) {
     alert("Congratulations! You win!");
@@ -186,6 +192,8 @@ function submitAnswers() {
   } else {
     calculatePoints();
     answered = true
+    submitBtn.classList.add('hide')
+    nextBtn.removeAttribute('class', 'hide')
   }
   }
 }
