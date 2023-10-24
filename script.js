@@ -185,10 +185,12 @@ function submitAnswers() {
   } else {
   const runnersUp = document.getElementById('runners-up-container');
   const champion = document.getElementById('champion-container');
-  if (runnersUp.childElementCount < 3) {
-    alert("you must submit 3 runners up");
+  if (runnersUp.childElementCount < 3 && champion.childElementCount < 1) {
+    alert("You must select 1 top answer and 3 runner up answers.");
+  } else if (runnersUp.childElementCount < 3) {
+    alert("You must select 3 runner up answers.");
   } else if (champion.childElementCount < 1) {
-    alert("you must submit 1 champion answer");
+    alert("You must select 1 top answer.");
   } else {
     calculatePoints();
     answered = true
